@@ -47,7 +47,7 @@ namespace Capture
             // Skip if the process is already hooked (and we want to hook multiple applications)
             if (HookManager.IsHooked(process.Id))
             {
-                throw new ProcessAlreadyHookedException();
+                //throw new ProcessAlreadyHookedException();
             }
 
             captureInterface.ProcessId = process.Id;
@@ -89,7 +89,7 @@ namespace Capture
             // Note: the first Alt+Tab out of the target application after injection
             //       may still be an issue - switching between windowed and 
             //       fullscreen fixes the issue however (see ScreenshotInjection.cs for another option)
-            BringProcessWindowToFront();
+            //BringProcessWindowToFront();
         }
 
         public CaptureInterface CaptureInterface
